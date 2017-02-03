@@ -16,3 +16,4 @@ ADD $A2CONF /etc/apache2/sites-available/
 #Configuracion del Apache2
 RUN a2dissite default.conf
 RUN a2enssite $A2CONF
+CMD ["/usr/sbin/apache2ctl","-D","FOREGROUND"]
