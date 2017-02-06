@@ -9,7 +9,7 @@ ENV DROOT /var/www/prestashop
 EXPOSE 80 443 3306
 
 #Instalaciones
-RUN apt update && apt upgrade && apt install apache2 apache2-doc php7.0 -y
+RUN apt update && apt install apache2 apache2-doc php7.0 -y
 ADD $A2CONF /etc/apache2/sites-available/
 
 
