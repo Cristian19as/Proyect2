@@ -15,3 +15,4 @@ RUN apt install php7.0 libapache2-mod-php7.0 php7.0-pspell php7.0-curl php7.0-gd
 RUN apt install unzip -y
 RUN unzip /var/www/joomla/$JOOMLAZIP -d /var/www/joomla
 RUN chown www-data:www-data -R /var/www/joomla/*
+VOLUME /var/www/joomla
