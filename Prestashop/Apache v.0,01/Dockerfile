@@ -4,6 +4,7 @@ MAINTAINER Cristian Arese
 #Variables del dockerfile
 ENV A2CONF prestashop.conf
 ENV DROOT /var/www/prestashop/
+ENV DROOT2 /var/www/prestashopmail/
 
 #Puertos abiertos
 EXPOSE 80 443 3306
@@ -14,8 +15,10 @@ ADD $A2CONF /etc/apache2/sites-available/
 
 
 #Configuracion del Apache2
-RUN mkdir $DROOT
+RUN mkdir $DROOT && mkdir $DROOT2
 RUN chown www-data:www-data -R $DROOT
 RUN a2dissite 000-default.conf
 RUN a2ensite $A2CONF
+VOLUME /var/www/prestashop/
+VOLUME /var/www/prestashopmail/
 CMD ["/usr/sbin/apache2ctl","-D","FOREGROUND"]

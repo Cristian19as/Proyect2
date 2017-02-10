@@ -16,3 +16,4 @@ RUN apt install unzip -y
 RUN unzip /var/www/prestashop/$AZIP -d /var/www/prestashop
 RUN chown www-data:www-data -R /var/www/prestashop/*
 VOLUME /var/www/prestashop/
+VOLUME /var/www/prestashopmail/

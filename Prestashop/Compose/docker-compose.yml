@@ -20,6 +20,7 @@ services:
      image: cpa2
      volumes:
        - /var/www/prestashop/:/var/www/prestashop/
+       - /var/www/prestashopmail/:/var/www/prestashopmail/
      ports:
        - "80:80"
        - "443:443"
