@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - /var/www/moodle/base/:/var/lib/mysql
+     ports:
+       - "3306:3306"
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: hola123
+       MYSQL_DATABASE: moodle
+       MYSQL_USER: albert
+       MYSQL_PASSWORD: hola123
+
+   moodle:
+     depends_on:
+       - db
+     image: apc
+     volumes:
+       - /var/www/moodle/:/var/www/moodle/
+     ports:
+       - "80:80"
+       - "443:443"
+     restart: always
