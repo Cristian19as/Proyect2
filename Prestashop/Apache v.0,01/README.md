@@ -6,6 +6,7 @@
 ### Variables dockerfile
 
   > ENV A2CONF "nombre archiv .conf del apache"
+  
   > ENV DROOT "ruta de directorio root del site apache"
 
 ### Lista de paquetes instalados
