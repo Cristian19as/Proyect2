@@ -9,10 +9,10 @@ services:
      ports:
        - "3306:3306"
      environment:
-       MYSQL_ROOT_PASSWORD: weijinwei998
+       MYSQL_ROOT_PASSWORD: YOUPASS
        MYSQL_DATABASE: joomla
        MYSQL_USER: Pol
-       MYSQL_PASSWORD: weijinwei998
+       MYSQL_PASSWORD: YOUPASS
 
    joomla:
      depends_on:
