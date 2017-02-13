@@ -20,6 +20,7 @@ services:
      image: apc
      volumes:
        - /var/www/moodle/:/var/www/moodle/
+       - /var/www/moodlehopmail/:/var/www/moodlemail/
      ports:
        - "80:80"
        - "443:443"
