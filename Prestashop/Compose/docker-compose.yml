@@ -4,7 +4,7 @@ services:
    db:
      image: mysql:5.7
      volumes:
-       - /var/www/prestashop/base/:/var/lib/mysql
+       - /var/bd/prestashop/base/:/var/lib/mysql
      ports:
        - "3306:3306"
      restart: always
@@ -21,6 +21,7 @@ services:
      volumes:
        - /var/www/prestashop/:/var/www/prestashop/
        - /var/www/prestashopmail/:/var/www/prestashopmail/
+       - /var/pass:/var/pass
      ports:
        - "80:80"
        - "443:443"
