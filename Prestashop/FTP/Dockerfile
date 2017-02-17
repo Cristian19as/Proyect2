@@ -23,3 +23,4 @@ RUN chmod +x /usr/bin/supervisord
 
 #Ejecucion del supervisor (Programa para "vigilar" processos en este caso vsftpd)
 CMD ["/usr/bin/supervisord"]
+#Cristian Arese
