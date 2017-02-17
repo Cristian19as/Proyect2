@@ -28,3 +28,4 @@ VOLUME /var/www/prestashop/
 VOLUME /var/www/prestashopmail/
 VOLUME /var/pass/
 CMD ["/usr/sbin/apache2ctl","-D","FOREGROUND"]
+#Cristian Arese
